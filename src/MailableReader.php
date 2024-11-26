@@ -9,6 +9,7 @@ use Exception;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Traits\Localizable;
 
 class MailableReader
@@ -158,7 +159,9 @@ class MailableReader
         $mailable = $composer->mailable;
 
         $composer->email->view = $mailable->view;
-        $composer->email->variables = $mailable->buildViewData();
+        $composer->email->variables = Arr::except($mailable->buildViewData(), [
+            '__laravel_mailable',
+        ]);
 
         $localeToUse = $composer->locale ?? app()->currentLocale();
 
