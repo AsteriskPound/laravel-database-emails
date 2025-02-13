@@ -53,7 +53,7 @@ class Config
      */
     public static function cronjobEmailLimit(): int
     {
-        return config('laravel-database-emails.limit', 20);
+        return (int) config('laravel-database-emails.limit', 20);
     }
 
     /**
