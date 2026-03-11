@@ -1,5 +1,5 @@
 {
-    "name": "AsteriskPound/laravel-database-emails",
+    "name": "asteriskpound/laravel-database-emails",
     "description": "Store and send e-mails using the database",
     "license": "MIT",
     "authors": [
