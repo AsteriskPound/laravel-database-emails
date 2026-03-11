@@ -1,5 +1,5 @@
 {
-    "name": "stackkit/laravel-database-emails",
+    "name": "AsteriskPound/laravel-database-emails",
     "description": "Store and send e-mails using the database",
     "license": "MIT",
     "authors": [
